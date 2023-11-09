@@ -1,25 +1,36 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("身長を入力してください。(m)");
+
+        System.out.println("1人目の身長を入力してください。(m)");
         Scanner sc = new Scanner(System.in);
-        double height = Double.parseDouble(sc.nextLine());
+        double height1 = Double.parseDouble(sc.nextLine());
 
-        System.out.println("体重を入力してください。(Kg)");
-        double weight = Double.parseDouble(sc.nextLine());
+        System.out.println("1人目の体重を入力してください。(Kg)");
+        double weight1 = Double.parseDouble(sc.nextLine());
 
-        double bmi = weight / (height * height);
+        System.out.println("2人目の身長を入力してください。(m)");
+        double height2 = Double.parseDouble(sc.nextLine());
 
-        if (bmi < 18.5) {
-            System.out.println(bmi);
-            System.out.println("低体重");
-        } else if (bmi < 25) {
-            System.out.println(bmi);
-            System.out.println("普通体重");
-        } else if (25 <= bmi) {
-            System.out.println(bmi);
-            System.out.println("肥満");
-        }
+        System.out.println("2人目の体重を入力してください。(Kg)");
+        double weight2 = Double.parseDouble(sc.nextLine());
+
+        double bmi1 = weight1 / (height1 * height1);
+        double bmi2 = weight2 / (height2 * height2);
+
+        System.out.println("1人目");
+        System.out.printf("%.2f%n", bmi1);
+        double num1 = (height1 * height1) * 22;
+        System.out.print("適正体重は、");
+        System.out.printf("%.2f%n", num1);
+
+
+        System.out.println("2人目");
+        System.out.printf("%.2f%n", bmi2);
+        double num2 = (height2 * height2) * 22;
+        System.out.print("適正体重は、");
+        System.out.printf("%.2f%n", num2);
     }
 }
